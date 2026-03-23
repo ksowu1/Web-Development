@@ -1,0 +1,188 @@
+
+/* =====================================================
+   IT 3203 Milestone 1 Website
+   Topic: GitHub Copilot in Web Development
+   One shared stylesheet for all pages
+   ===================================================== */
+
+/* Element selector */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #1f2933;
+    line-height: 1.6;
+}
+
+/* Element selector */
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+/* Class selector */
+.wrapper {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header styling */
+.site-header {
+    background-color: #14324a;
+    color: #ffffff;
+    padding: 24px 0 18px;
+    border-bottom: 4px solid #0f2232;
+}
+
+.tagline {
+    margin: 6px 0 18px;
+    color: #d8e6f2;
+}
+
+/* Navigation with Flexbox */
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 0;
+}
+
+/* Descendant selector */
+.menu li a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
+    transition: 0.2s ease;
+}
+
+/* Hover effect on links */
+.menu li a:hover {
+    background-color: #ffffff;
+    color: #14324a;
+    border-color: #ffffff;
+}
+
+/* Class selector for active page */
+.active {
+    background-color: #ffffff;
+    color: #14324a !important;
+    font-weight: bold;
+}
+
+/* Layout using CSS Grid */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 24px 0;
+}
+
+/* Class selector */
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #d0d7de;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Make selected sections span both columns */
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* ID selector */
+#highlight-box {
+    background-color: #e8f1fb;
+    border-left: 6px solid #14324a;
+}
+
+/* Intro area */
+.intro-card {
+    min-height: 220px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+th, td {
+    border: 1px solid #b8c4ce;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #e9f0f6;
+}
+
+/* Image styling */
+img {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    border: 1px solid #c7d2db;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.caption {
+    font-size: 0.95rem;
+    color: #4a5968;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* General link styling */
+a {
+    color: #0f5fa8;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #14324a;
+    color: #ffffff;
+    padding: 18px 0;
+    margin-top: 20px;
+}
+
+.site-footer a {
+    color: #ffffff;
+}
+
+/* Responsive improvement for smaller screens */
+@media (max-width: 768px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu li a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

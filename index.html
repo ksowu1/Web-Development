@@ -2,73 +2,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Page metadata -->
+    <!-- Basic page setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Page title (shows in browser tab) -->
-    <title>IT 3203 Practice Site</title>
-
-    <!-- Simple internal styling -->
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #222;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        main {
-            padding: 30px;
-        }
-
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <title>GitHub Copilot in Web Development | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <!-- Site header with consistent navigation -->
+    <header class="site-header">
+        <div class="wrapper">
+            <h1>GitHub Copilot in Web Development</h1>
+            <p class="tagline">A class project website for IT 3203</p>
 
-    <header>
-        <h1>Welcome to My Practice Website</h1>
-        <p>IT 3203 – Intro to Web Development</p>
+            <nav aria-label="Main navigation">
+                <ul class="menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="what-is-copilot.html">What Is Copilot?</a></li>
+                    <li><a href="copilot-in-web-dev.html">Copilot in Web Dev</a></li>
+                    <li><a href="concepts.html">Key Concepts</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <h2>About This Site</h2>
-        <p>
-            My name is Komi Sowu. This website was created as part of Assignment 0 for IT 3203.
-            It is hosted using GitHub Pages and i will be used for future web
-            development practice.
-        </p>
+    <main class="wrapper grid-layout">
+        <section class="card intro-card">
+            <h2>Introduction</h2>
+            <p>
+                GitHub Copilot is an AI-powered coding assistant that can help developers write
+                code faster and explore solutions more efficiently. In web development, it can
+                support HTML structure, CSS styling ideas, JavaScript functions, debugging, and
+                code suggestions. This website introduces GitHub Copilot, explains how it can be
+                used in web development, and discusses its benefits, concerns, and key concepts.
+            </p>
+            <p>
+                The goal of this project is to present research in a clean and organized website
+                using HTML and CSS.
+            </p>
+        </section>
 
-        <h2>What I will be Learning</h2>
-        <ul>
-            <li>HTML structure</li>
-            <li>CSS styling</li>
-            <li>GitHub Pages hosting</li>
-            <li>Web development tools</li>
-        </ul>
+        <section class="card" id="highlight-box">
+            <h2>Key Terms</h2>
+            <ul>
+                <li>AI coding assistant</li>
+                <li>Autocomplete</li>
+                <li>Prompt</li>
+                <li>Code generation</li>
+                <li>Productivity</li>
+                <li>Debugging</li>
+                <li>Privacy</li>
+            </ul>
+        </section>
+
+        <section class="card full-width">
+            <h2>Table of Contents</h2>
+            <ol>
+                <li><a href="what-is-copilot.html">What Is GitHub Copilot?</a></li>
+                <li><a href="copilot-in-web-dev.html">GitHub Copilot in Web Development</a></li>
+                <li><a href="concepts.html">Key Concepts</a></li>
+                <li><a href="references.html">References and Learning Resources</a></li>
+                <li><a href="about.html">About the Author</a></li>
+            </ol>
+        </section>
+
+        <section class="card full-width">
+            <h2>Why This Topic Matters</h2>
+            <p>
+                AI tools are becoming more common in software development. Learning how GitHub
+                Copilot helps web developers and where it should be used carefully is important
+                for both students and professionals.
+            </p>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 – Komi Sowu Practice Site</p>
+    <footer class="site-footer">
+        <div class="wrapper">
+            <p>
+                This is a class project for IT 3203.
+                <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener noreferrer">
+                    Visit the IT 3203 course website
+                </a>
+            </p>
+        </div>
     </footer>
-
 </body>
 </html>
-
