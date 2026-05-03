@@ -1,11 +1,7 @@
 
-/* =====================================================
-   IT 3203 Milestone 1 Website
-   Topic: GitHub Copilot in Web Development
-   One shared stylesheet for all pages
-   ===================================================== */
 
-/* Element selector */
+
+/* Base page styles */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,19 +10,16 @@ body {
     line-height: 1.6;
 }
 
-/* Element selector */
 h1, h2, h3 {
     margin-top: 0;
 }
 
-/* Class selector */
 .wrapper {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
 }
 
-/* Header styling */
 .site-header {
     background-color: #14324a;
     color: #ffffff;
@@ -39,7 +32,6 @@ h1, h2, h3 {
     color: #d8e6f2;
 }
 
-/* Navigation with Flexbox */
 .menu {
     list-style: none;
     display: flex;
@@ -53,32 +45,28 @@ h1, h2, h3 {
     margin: 0;
 }
 
-/* Descendant selector */
 .menu li a {
     display: inline-block;
     color: #ffffff;
     text-decoration: none;
     padding: 10px 14px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 6px;
     transition: 0.2s ease;
 }
 
-/* Hover effect on links */
 .menu li a:hover {
     background-color: #ffffff;
     color: #14324a;
     border-color: #ffffff;
 }
 
-/* Class selector for active page */
 .active {
     background-color: #ffffff;
     color: #14324a !important;
     font-weight: bold;
 }
 
-/* Layout using CSS Grid */
 .grid-layout {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -86,7 +74,6 @@ h1, h2, h3 {
     padding: 24px 0;
 }
 
-/* Class selector */
 .card {
     background-color: #ffffff;
     padding: 20px;
@@ -95,23 +82,49 @@ h1, h2, h3 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-/* Make selected sections span both columns */
 .full-width {
     grid-column: 1 / -1;
 }
 
-/* ID selector */
 #highlight-box {
     background-color: #e8f1fb;
     border-left: 6px solid #14324a;
 }
 
-/* Intro area */
 .intro-card {
     min-height: 220px;
 }
 
+a {
+    color: #0f5fa8;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border: 1px solid #c7d2db;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+}
+
+.caption {
+    font-size: 0.95rem;
+    color: #4a5968;
+    margin-top: 10px;
+    text-align: center;
+}
+
 /* Table styling */
+.table-container {
+    overflow-x: auto;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -128,66 +141,7 @@ th {
     background-color: #e9f0f6;
 }
 
-/* Image styling */
-img {
-    width: 100%;
-    max-width: 850px;
-    height: auto;
-    border: 1px solid #c7d2db;
-    border-radius: 8px;
-    display: block;
-    margin: 0 auto;
-}
-
-.caption {
-    font-size: 0.95rem;
-    color: #4a5968;
-    margin-top: 10px;
-    text-align: center;
-}
-
-/* General link styling */
-a {
-    color: #0f5fa8;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-.site-footer {
-    background-color: #14324a;
-    color: #ffffff;
-    padding: 18px 0;
-    margin-top: 20px;
-}
-
-.site-footer a {
-    color: #ffffff;
-}
-
-/* Responsive improvement for smaller screens */
-@media (max-width: 768px) {
-    .grid-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .full-width {
-        grid-column: auto;
-    }
-
-    .menu {
-        flex-direction: column;
-    }
-
-    .menu li a {
-        width: 100%;
-        box-sizing: border-box;
-    }
-}
-
-/* Quiz page styling */
+/* Quiz page styles */
 .question-block {
     margin-bottom: 24px;
     padding: 18px;
@@ -260,4 +214,86 @@ a:hover {
     color: #c62828;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.site-footer {
+    background-color: #14324a;
+    color: #ffffff;
+    padding: 18px 0;
+    margin-top: 20px;
+}
+
+.site-footer a {
+    color: #ffffff;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 900px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .wrapper {
+        width: 94%;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    table {
+        font-size: 0.95rem;
+    }
+}
+
+/* Phone breakpoint */
+@media (max-width: 600px) {
+    .site-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .tagline {
+        font-size: 0.95rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .card {
+        padding: 14px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .button-row {
+        flex-direction: column;
+    }
+
+    .button-row button {
+        width: 100%;
+    }
+
+    .question-block input[type="text"] {
+        width: 100%;
+        margin: 8px 0 0;
+        box-sizing: border-box;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 0.95rem;
+    }
 }
